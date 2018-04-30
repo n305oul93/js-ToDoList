@@ -1,0 +1,7 @@
+li{
+    list-style-type: none;
+}
+
+input[type='checkbox'] {
+    margin-right: 10px;
+}
