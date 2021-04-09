@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS ToDo</title>
+
+    <style media="screen"></style>
+  </head>
+  <body>
+    <h2>To Do List</h2>
+
+    <input id="user-input" placeholder="Tell Me What To Do" />
+
+    <button id="submitToDo" type="submit">Submit</button>
+
+    <ul id="list"></ul>
+
+    <script type="text/javascript">
+      var addToDo = document.getElementById('user-input')
+
+      var newToDo = document.getElementById('submitToDo')
+
+      var ulList = document.getElementById('list')
+      newToDo.addEventListener('click', function (event) {
+        var newToDoElement = document.createElement('li')
+        newToDoElement.innerHTML =
+          "<input type='checkbox' class='work'/>" + addToDo.value
+        ulList.appendChild(newToDoElement)
+        var chkbx = document.querySelectorAll('input[type=checkbox]')
+        var chkbxArray = Array.from(chkbx)
+        console.log(chkbxArray)
+        chkbxArray.forEach(function (item) {
+          if (chkbxArray[item].firstElementChild.checked) {
+            chkbxArray[item].style.textDecoration = line - through
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
